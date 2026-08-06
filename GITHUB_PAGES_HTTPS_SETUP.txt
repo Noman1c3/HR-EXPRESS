@@ -1,0 +1,29 @@
+# GitHub Pages HTTPS Configuration
+# ═══════════════════════════════════════════════════════════════════
+#
+# GitHub Pages AUTOMATICALLY provides free HTTPS via Let's Encrypt.
+# No .htaccess is needed for GitHub Pages — it uses its own CDN.
+#
+# What you DO need to do in GitHub settings:
+#
+# 1. Go to your repository on GitHub
+# 2. Click Settings → Pages
+# 3. Under "Custom domain" — enter your domain if you have one
+# 4. CHECK the box "Enforce HTTPS" ← this is the important one
+#
+# That's it. GitHub handles the SSL certificate automatically.
+#
+# ── For your custom domain (if you have one) ────────────────────
+# You also need a CNAME file in your repo root containing just:
+#   hrexpressservice.com
+# (or whatever your domain is)
+#
+# ── DNS records at your domain registrar ────────────────────────
+# If using a custom domain, point your DNS to GitHub Pages:
+#   A     @     185.199.108.153
+#   A     @     185.199.109.153
+#   A     @     185.199.110.153
+#   A     @     185.199.111.153
+#   CNAME www   yourusername.github.io
+#
+# ═══════════════════════════════════════════════════════════════════

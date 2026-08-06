@@ -3,6 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ Security Headers ═══════════════════════════════════════ -->
+  <!-- X-Frame-Options: prevent clickjacking via iframe embedding -->
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
+  <!-- X-Content-Type-Options: prevent MIME-type sniffing -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <!-- Referrer-Policy: don't leak URL info to third-party domains -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- Content-Security-Policy: allow self + Google Fonts + Square payments -->
+  <meta http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      script-src  'self' 'unsafe-inline'
+                  https://squareup.com
+                  https://*.squareup.com
+                  https://js.squareup.com
+                  https://sandbox.web.squarecdn.com
+                  https://web.squarecdn.com;
+      style-src   'self' 'unsafe-inline'
+                  https://fonts.googleapis.com;
+      font-src    'self'
+                  https://fonts.gstatic.com
+                  data:;
+      img-src     'self'
+                  data:
+                  blob:
+                  https://*.squareup.com
+                  https://*.squareupsandbox.com;
+      frame-src   https://squareup.com
+                  https://*.squareup.com
+                  https://*.squareupsandbox.com;
+      connect-src 'self'
+                  https://squareup.com
+                  https://*.squareup.com
+                  https://squareupsandbox.com
+                  https://*.squareupsandbox.com;
+      object-src  'none';
+      base-uri    'self';
+      form-action 'self'
+                  https://squareup.com
+                  https://*.squareup.com;">
+  <!-- ═══════════════════════════════════════════════════════════ -->
 <title>Book a Call | HR Express Service</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
