@@ -1107,3 +1107,46 @@
   40% { transform: translateY(-8px); }
   60% { transform: translateY(-4px); }
 }
+
+/* Minimal side scroll indicator */
+.scroll-indicator-side {
+  position: absolute;
+  right: 4%;
+  bottom: 10%;
+  height: 80px;
+  width: 1px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 10;
+}
+
+.scroll-line-side {
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-line-side::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: var(--lime-400);
+  animation: scrollDownLine 2s infinite cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@keyframes scrollDownLine {
+  0% { top: -50%; }
+  100% { top: 100%; }
+}
+
+@media (max-width: 768px) {
+  .scroll-indicator-side {
+    display: none; /* Hide on mobile so it doesn't overlap text */
+  }
+}
