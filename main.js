@@ -83,3 +83,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Newsletter Form Handler
+document.addEventListener('DOMContentLoaded', () => {
+  const forms = document.querySelectorAll('.newsletter-form');
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzClEjePs1U1OvoBiL14KiuLpbWcOuuy6dY0X7MVng6syVhb3wDyolV0wjE8GJiTJTE/exec";
+
+  forms.forEach(form => {
+    // Remove the inline onsubmit attribute if it exists
+    form.removeAttribute('onsubmit');
+    
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      
+      const emailInput = form.querySelector('input[type="email"]');
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      
+      const email = emailInput.value.trim();
+      if (!email) return;
+      
+      submitBtn.textContent = 'Signing up...';
+      submitBtn.disabled = true;
+      
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'email=' + encodeURIComponent(email)
+      })
+      .then(response => {
+        submitBtn.textContent = 'Subscribed!';
+        submitBtn.style.backgroundColor = 'var(--lime-500)';
+        submitBtn.style.color = 'var(--navy-900)';
+        emailInput.value = '';
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style = '';
+        }, 4000);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        submitBtn.textContent = 'Error';
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }, 3000);
+      });
+    });
+  });
+});
