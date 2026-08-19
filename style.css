@@ -1101,3 +1101,9 @@
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50%       { transform: translateY(-8px) rotate(8deg); }
 }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
+}
