@@ -76,56 +76,57 @@
 </header>
 <main>
 
-<section class="hero" id="top" style="padding-top: 140px; padding-bottom: 80px;">
+<section class="hero" id="top">
+  
   <div class="wrap hero-wrap">
-    <div class="hero-text">
+    <div class="hero-text" style="max-width: 600px; margin: 0 auto; text-align: center;">
       <h1>News & Updates</h1>
-      <p>Stay informed with the latest HR insights, compliance updates, and strategies for your small business. Subscribe to our newsletter to get updates directly in your inbox.</p>
+      <p style="color: var(--navy-100); font-size: 1.1rem; margin-bottom: 2rem;">Stay informed with the latest HR insights, compliance updates, and strategies for your small business. Subscribe to our newsletter to get updates directly in your inbox.</p>
       
-      <div class="newsletter-box" style="margin-top: 2rem; background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-        <h3 style="color: var(--lime); margin-bottom: 0.5rem;">Subscribe to Our Newsletter</h3>
-        <form class="newsletter-form" id="newsPageForm" style="display: flex; gap: 0.5rem; max-width: 400px;">
-          <input type="email" id="newsPageEmail" placeholder="Enter your email" required style="flex:1; padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.2); background: transparent; color: #fff;">
-          <button type="submit" class="btn btn-primary" id="newsPageBtn" style="padding: 0.75rem 1.5rem;">Subscribe</button>
+      <div class="newsletter-box" style="background: rgba(11, 51, 85, 0.4); padding: 2.5rem; border-radius: var(--radius-l); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); box-shadow: var(--shadow-2);">
+        <h3 style="color: var(--lime-500); margin-bottom: 1.5rem; font-size: 1.5rem;">Subscribe to Our Newsletter</h3>
+        <form class="newsletter-form" id="newsPageForm" style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
+          <input type="email" id="newsPageEmail" placeholder="Enter your email" required style="width: 100%; padding: 1rem 1.5rem; border-radius: var(--radius-m); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: var(--white); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+          <button type="submit" class="btn btn-primary" id="newsPageBtn" style="width: 100%; padding: 1rem 1.5rem; font-size: 1.1rem; border-radius: var(--radius-m); cursor: pointer;">Subscribe</button>
         </form>
-        <div id="newsPageMessage" style="margin-top: 0.5rem; font-size: 0.9rem;"></div>
+        <div id="newsPageMessage" style="margin-top: 1rem; font-size: 0.95rem; color: var(--white);"></div>
       </div>
     </div>
   </div>
 </section>
 
 
-<section class="updates-grid" style="padding: 80px 0; background: var(--navy-900);">
+<section class="updates-grid" style="padding: 100px 0; background: var(--cream);">
   <div class="wrap">
-    <h2 style="margin-bottom: 40px; text-align: center;">Latest Articles</h2>
+    <h2 style="margin-bottom: 60px; text-align: center; color: var(--navy-950); font-size: 2.5rem;">Latest Articles</h2>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
       
       <!-- Article 1 -->
-      <a href="article-ai-ethics.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--navy-950); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-          <img src="assets/articles/ai-ethics-cover.jpg" alt="AI Ethics" style="width: 100%; height: 220px; object-fit: cover;">
-          <div style="padding: 24px;">
-            <p style="color: var(--lime); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Technology & Ethics</p>
-            <h3 style="font-size: 1.4rem; margin-bottom: 16px; line-height: 1.3;">What Is the Small Business Ethical Dilemma of AI?</h3>
-            <div style="display: flex; align-items: center; gap: 12px; margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
-              <img src="assets/articles/cindy-cushman.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-              <span style="font-size: 0.9rem; color: #a1a1aa;">By Dr. Cindy Cushman</span>
+      <a href="article-ai-ethics.html" style="text-decoration: none; color: inherit; display: block;">
+        <div style="background: var(--white); border-radius: var(--radius-l); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: var(--shadow-1); height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-1)';">
+          <img src="assets/articles/ai-ethics-cover.jpg" alt="AI Ethics" style="width: 100%; height: 240px; object-fit: cover;">
+          <div style="padding: 32px; display: flex; flex-direction: column; flex-grow: 1;">
+            <p style="color: var(--navy-700); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Technology & Ethics</p>
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px; line-height: 1.3; color: var(--navy-950);">What Is the Small Business Ethical Dilemma of AI?</h3>
+            <div style="display: flex; align-items: center; gap: 16px; margin-top: auto; border-top: 1px solid var(--line); padding-top: 24px;">
+              <img src="assets/articles/cindy-cushman.jpg" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+              <span style="font-size: 1rem; color: var(--muted); font-weight: 500;">By Dr. Cindy Cushman</span>
             </div>
           </div>
         </div>
       </a>
 
       <!-- Article 2 -->
-      <a href="article-i9-forms.html" style="text-decoration: none; color: inherit;">
-        <div style="background: var(--navy-950); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-          <img src="assets/articles/i9-forms-cover.jpg" alt="I-9 Forms" style="width: 100%; height: 220px; object-fit: cover;">
-          <div style="padding: 24px;">
-            <p style="color: var(--lime); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Compliance & HR</p>
-            <h3 style="font-size: 1.4rem; margin-bottom: 16px; line-height: 1.3;">What Every Employer Needs to Know About I-9 Forms in 2024</h3>
-            <div style="display: flex; align-items: center; gap: 12px; margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 16px;">
-              <img src="assets/articles/cindy-cushman.jpg" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
-              <span style="font-size: 0.9rem; color: #a1a1aa;">By Dr. Cindy Cushman</span>
+      <a href="article-i9-forms.html" style="text-decoration: none; color: inherit; display: block;">
+        <div style="background: var(--white); border-radius: var(--radius-l); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: var(--shadow-1); height: 100%; display: flex; flex-direction: column;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='var(--shadow-2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-1)';">
+          <img src="assets/articles/i9-forms-cover.jpg" alt="I-9 Forms" style="width: 100%; height: 240px; object-fit: cover;">
+          <div style="padding: 32px; display: flex; flex-direction: column; flex-grow: 1;">
+            <p style="color: var(--navy-700); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">Compliance & HR</p>
+            <h3 style="font-size: 1.5rem; margin-bottom: 20px; line-height: 1.3; color: var(--navy-950);">What Every Employer Needs to Know About I-9 Forms in 2024</h3>
+            <div style="display: flex; align-items: center; gap: 16px; margin-top: auto; border-top: 1px solid var(--line); padding-top: 24px;">
+              <img src="assets/articles/cindy-cushman.jpg" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+              <span style="font-size: 1rem; color: var(--muted); font-weight: 500;">By Dr. Cindy Cushman</span>
             </div>
           </div>
         </div>
@@ -184,6 +185,6 @@
     </div>
   </div>
 </footer>
-<script src="main.js?v=3"></script>
+<script src="main.js?v=4"></script>
 </body>
 </html>
