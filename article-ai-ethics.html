@@ -55,6 +55,9 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23A8CD3A'/><text x='50' y='65' font-family='Arial' font-size='45' font-weight='bold' fill='%23080F23' text-anchor='middle'>HR</text></svg>">
 
     <style>
+      .hero-split { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; position: relative; z-index: 2; margin: 0 auto; }
+      .hero-split .hero-text { flex: 1; min-width: 320px; }
+      .hero-split .hero-image { flex: 1; min-width: 320px; max-width: 500px; display: flex; justify-content: flex-end; }
       .article-content h3 { color: var(--navy-950); margin-top: 40px; margin-bottom: 20px; font-size: 1.75rem; font-weight: 700; }
       .article-content h4 { color: var(--navy-800); margin-top: 32px; margin-bottom: 16px; font-size: 1.3rem; font-weight: 600; }
       .article-content p { margin-bottom: 24px; }
@@ -88,8 +91,12 @@
 </header>
 <main>
 <section class="hero" id="top">
-  
-  <div class="wrap hero-wrap">
+  <div class="hero-bg" aria-hidden="true">
+      <svg class="arc-a" viewBox="0 0 200 200" fill="none"><path d="M10 150 C 60 40, 150 30, 190 90" stroke="#A8CD3A" stroke-width="14" stroke-linecap="round"/></svg>
+      <svg class="arc-b" viewBox="0 0 200 200" fill="none"><path d="M10 150 C 60 40, 150 30, 190 90" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/></svg>
+      <svg class="arc-c" viewBox="0 0 200 200" fill="none"><path d="M10 150 C 60 40, 150 30, 190 90" stroke="#A8CD3A" stroke-width="18" stroke-linecap="round"/></svg>
+    </div>
+  <div class="wrap hero-split">
     <div class="hero-text">
       <h1 style="font-size: 3rem; line-height: 1.1; margin-bottom: 24px;">What Is the Small Business Ethical Dilemma of AI?</h1>
       <div style="display: flex; align-items: center; gap: 16px; margin-top: 32px;">
@@ -156,7 +163,7 @@
       <div>
         <h4 style="font-size: 1.4rem; color: var(--navy-950); margin-bottom: 12px; margin-top: 0;">About the Author</h4>
         <p style="font-size: 1rem; margin-bottom: 16px; color: var(--muted);">Dr. Cindy Cushman is an experienced HR consultant providing strategic guidance to small businesses.</p>
-        <a href="https://hr2fit.com/author/cindy/" target="_blank" style="color: var(--navy-800); text-decoration: none; font-weight: 700; font-size: 1rem; border-bottom: 2px solid var(--lime-500); padding-bottom: 2px;">View more from Dr. Cushman &rarr;</a>
+        <a href="about.html" style="color: var(--navy-800); text-decoration: none; font-weight: 700; font-size: 1rem; border-bottom: 2px solid var(--lime-500); padding-bottom: 2px;">View more from Dr. Cushman &rarr;</a>
       </div>
     </div>
   </div>
@@ -210,6 +217,6 @@
     </div>
   </div>
 </footer>
-<script src="main.js?v=4"></script>
+<script src="main.js?v=5"></script>
 </body>
 </html>

@@ -77,20 +77,22 @@
 <main>
 
 <section class="hero" id="top">
-  
-  <div class="wrap hero-wrap">
-    <div class="hero-text" style="max-width: 600px; margin: 0 auto; text-align: center;">
-      <h1>News & Updates</h1>
-      <p style="color: var(--navy-100); font-size: 1.1rem; margin-bottom: 2rem;">Stay informed with the latest HR insights, compliance updates, and strategies for your small business. Subscribe to our newsletter to get updates directly in your inbox.</p>
-      
-      <div class="newsletter-box" style="background: rgba(11, 51, 85, 0.4); padding: 2.5rem; border-radius: var(--radius-l); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); box-shadow: var(--shadow-2);">
-        <h3 style="color: var(--lime-500); margin-bottom: 1.5rem; font-size: 1.5rem;">Subscribe to Our Newsletter</h3>
-        <form class="newsletter-form" id="newsPageForm" style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
-          <input type="email" id="newsPageEmail" placeholder="Enter your email" required style="width: 100%; padding: 1rem 1.5rem; border-radius: var(--radius-m); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: var(--white); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
-          <button type="submit" class="btn btn-primary" id="newsPageBtn" style="width: 100%; padding: 1rem 1.5rem; font-size: 1.1rem; border-radius: var(--radius-m); cursor: pointer;">Subscribe</button>
-        </form>
-        <div id="newsPageMessage" style="margin-top: 1rem; font-size: 0.95rem; color: var(--white);"></div>
-      </div>
+  <div class="hero-bg" aria-hidden="true">
+      <svg class="arc-a" viewBox="0 0 200 200" fill="none"><path d="M10 150 C 60 40, 150 30, 190 90" stroke="#A8CD3A" stroke-width="14" stroke-linecap="round"/></svg>
+      <svg class="arc-b" viewBox="0 0 200 200" fill="none"><path d="M10 150 C 60 40, 150 30, 190 90" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/></svg>
+      <svg class="arc-c" viewBox="0 0 200 200" fill="none"><path d="M10 150 C 60 40, 150 30, 190 90" stroke="#A8CD3A" stroke-width="18" stroke-linecap="round"/></svg>
+    </div>
+  <div class="wrap hero-content">
+    <h1>News & Updates</h1>
+    <p class="lede" style="color: var(--white); margin-bottom: 2.5rem;">Stay informed with the latest HR insights, compliance updates, and strategies for your small business. Subscribe to our newsletter to get updates directly in your inbox.</p>
+    
+    <div class="newsletter-box" style="background: rgba(11, 51, 85, 0.4); padding: 2.5rem; border-radius: var(--radius-l); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); box-shadow: var(--shadow-2); width: 100%;">
+      <h3 style="color: var(--lime-500); margin-bottom: 1.5rem; font-size: 1.5rem;">Subscribe to Our Newsletter</h3>
+      <form class="newsletter-form" id="newsPageForm" style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
+        <input type="email" id="newsPageEmail" placeholder="Enter your email" required style="width: 100%; padding: 1rem 1.5rem; border-radius: var(--radius-m); border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: var(--white); font-size: 1rem; outline: none; transition: border-color 0.3s ease;">
+        <button type="submit" class="btn btn-primary" id="newsPageBtn" style="width: 100%; padding: 1rem 1.5rem; font-size: 1.1rem; border-radius: var(--radius-m); cursor: pointer;">Subscribe</button>
+      </form>
+      <div id="newsPageMessage" style="margin-top: 1rem; font-size: 0.95rem; color: var(--white);"></div>
     </div>
   </div>
 </section>
@@ -185,6 +187,6 @@
     </div>
   </div>
 </footer>
-<script src="main.js?v=4"></script>
+<script src="main.js?v=5"></script>
 </body>
 </html>
