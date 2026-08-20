@@ -1177,10 +1177,14 @@
 ═══════════════════════════════════════════════════ */
 .review-carousel-wrapper {
   position: relative;
-  overflow: hidden;
-  border-radius: 20px;
   max-width: 860px;
   margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.review-clip {
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .review-track {
@@ -1284,8 +1288,8 @@
   transform: translateY(-50%) scale(1.08);
 }
 
-.review-prev { left: -22px; }
-.review-next { right: -22px; }
+.review-prev { left: 0; }
+.review-next { right: 0; }
 
 /* Dots */
 .review-dots {
