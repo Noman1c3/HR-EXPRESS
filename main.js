@@ -136,3 +136,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// ── Review Carousel ────────────────────────────────────────────────
+(function() {
+  const track  = document.getElementById('reviewTrack');
+  const dots   = document.querySelectorAll('.review-dot');
+  const prev   = document.getElementById('reviewPrev');
+  const next   = document.getElementById('reviewNext');
+  if (!track) return;
+
+  const total  = track.children.length;
+  let current  = 0;
+  let autoTimer;
+
+  function goTo(index) {
+    current = (index + total) % total;
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function startAuto() {
+    autoTimer = setInterval(() => goTo(current + 1), 6000);
+  }
+
+  function resetAuto() {
+    clearInterval(autoTimer);
+    startAuto();
+  }
+
+  prev.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+  next.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      goTo(parseInt(dot.dataset.index));
+      resetAuto();
+    });
+  });
+
+  // Touch / swipe support
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) { goTo(diff > 0 ? current + 1 : current - 1); resetAuto(); }
+  });
+
+  startAuto();
+})();

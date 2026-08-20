@@ -222,30 +222,113 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials on-dark">
+    <!-- TESTIMONIALS CAROUSEL -->
+  <section class="testimonials on-dark" id="testimonials">
     <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">What Clients Say</span>
-        <h2 style="color:#fff;">Trusted by small business owners</h2>
+      <div class="section-head" style="text-align:center;max-width:700px;margin:0 auto 3rem;">
+        <span class="eyebrow" style="justify-content:center;">What Clients Say</span>
+        <h2 style="color:#fff;">Trusted by leaders across industries</h2>
       </div>
-      <div class="testi-grid">
-        <div class="testi-card">
-          <svg class="qmark" width="30" height="24" viewBox="0 0 30 24" fill="currentColor"><path d="M0 24V14.4C0 6.4 4.8 1.2 12.8 0l1.6 4.8C9.6 6 7.2 8.8 7.2 12.8H12.8V24H0ZM17.2 24V14.4C17.2 6.4 22 1.2 30 0l1.6 4.8C26.8 6 24.4 8.8 24.4 12.8H30V24H17.2Z"/></svg>
-          <p class="quote">Creative, reliable, and genuinely passionate about what they do.</p>
-          <p class="who">Small Business Owner</p>
-        </div>
-        <div class="testi-card">
-          <svg class="qmark" width="30" height="24" viewBox="0 0 30 24" fill="currentColor"><path d="M0 24V14.4C0 6.4 4.8 1.2 12.8 0l1.6 4.8C9.6 6 7.2 8.8 7.2 12.8H12.8V24H0ZM17.2 24V14.4C17.2 6.4 22 1.2 30 0l1.6 4.8C26.8 6 24.4 8.8 24.4 12.8H30V24H17.2Z"/></svg>
-          <p class="quote">They caught issues we didn't even know we had, and helped us fix them fast.</p>
-          <p class="who">Retail Operations Manager</p>
-        </div>
-        <div class="testi-card">
-          <svg class="qmark" width="30" height="24" viewBox="0 0 30 24" fill="currentColor"><path d="M0 24V14.4C0 6.4 4.8 1.2 12.8 0l1.6 4.8C9.6 6 7.2 8.8 7.2 12.8H12.8V24H0ZM17.2 24V14.4C17.2 6.4 22 1.2 30 0l1.6 4.8C26.8 6 24.4 8.8 24.4 12.8H30V24H17.2Z"/></svg>
-          <p class="quote">Straightforward advice, right when we needed it most, with no long contract required.</p>
-          <p class="who">Founder, Local Services Company</p>
-        </div>
+
+      <div class="review-carousel-wrapper">
+        <!-- Track -->
+        <div class="review-track" id="reviewTrack">
+
+          <!-- Slide 1: Amie M. Evans -->
+          <div class="review-slide">
+            <div class="review-card">
+              <div class="review-quote-icon">
+                <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 28V16.8C0 7.467 5.6 1.4 14.933 0L16.8 5.6C11.2 7 8.4 10.267 8.4 16.8V28H0ZM19.2 28V16.8C19.2 7.467 24.8 1.4 34.133 0L36 5.6C30.4 7 27.6 10.267 27.6 16.8V28H19.2Z" fill="#A8CD3A" fill-opacity="0.35"/>
+                </svg>
+              </div>
+              <p class="review-text">Cindy Cushman keeps herself well informed about current labor laws and industry standards as well as up and coming trends in the field. She understands that the needs of each company as well as their employees are unique and takes the time to develop a deep understanding of those needs. This allows her to implement policies and procedures that meet the requirements of the law and the individual workplace. I have worked closely with her at Harvard University where we both were employed and have used her as a consultant for my personal HR needs. The most important quality Cindy brings to the HR equation is an organic talent and deep empathy for caring about the individual's uniqueness and crafting HR solutions that actually work for both.</p>
+              <div class="review-author">
+                <img src="assets/reviewers/amie-evans.jpg" alt="Amie M. Evans" class="review-avatar" loading="lazy">
+                <div class="review-meta">
+                  <strong class="review-name">Amie M. Evans</strong>
+                  <span class="review-title">Executive Assistant to the Dean, Harvard Continuing Education and University Extension</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Kimberly J. Murphy -->
+          <div class="review-slide">
+            <div class="review-card">
+              <div class="review-quote-icon">
+                <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 28V16.8C0 7.467 5.6 1.4 14.933 0L16.8 5.6C11.2 7 8.4 10.267 8.4 16.8V28H0ZM19.2 28V16.8C19.2 7.467 24.8 1.4 34.133 0L36 5.6C30.4 7 27.6 10.267 27.6 16.8V28H19.2Z" fill="#A8CD3A" fill-opacity="0.35"/>
+                </svg>
+              </div>
+              <p class="review-text">Cindy was a great help to me when navigating the complexities of health insurance and policies with ease. Her compassion, knowledge, and professionalism, her years of experience plus her willingness to welcome innovation in the field of Human Resources, make her an invaluable asset and resource for any company and organization.</p>
+              <div class="review-author">
+                <img src="assets/reviewers/kimberly-murphy.jpg" alt="Kimberly J. Murphy" class="review-avatar" loading="lazy">
+                <div class="review-meta">
+                  <strong class="review-name">Kimberly J. Murphy</strong>
+                  <span class="review-title">Former Executive Director at Plymouth, Cape, and Islands Mission Hub</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Vesta Scotland -->
+          <div class="review-slide">
+            <div class="review-card">
+              <div class="review-quote-icon">
+                <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 28V16.8C0 7.467 5.6 1.4 14.933 0L16.8 5.6C11.2 7 8.4 10.267 8.4 16.8V28H0ZM19.2 28V16.8C19.2 7.467 24.8 1.4 34.133 0L36 5.6C30.4 7 27.6 10.267 27.6 16.8V28H19.2Z" fill="#A8CD3A" fill-opacity="0.35"/>
+                </svg>
+              </div>
+              <p class="review-text">Cindy Cushman is professional and proficient in the field of Human Resources. She has been a tremendous support system during perpetual transitioning. She has demonstrated professionalism in the most dignified way. Her knowledge and expertise is impressive. I would like to thank Cindy for her professionalism and caring attitude!</p>
+              <div class="review-author">
+                <img src="assets/reviewers/vesta-scotland.jpg" alt="Vesta Scotland" class="review-avatar" loading="lazy">
+                <div class="review-meta">
+                  <strong class="review-name">Vesta Scotland</strong>
+                  <span class="review-title">Events Planner, Internal Events and Wedding Planner, Exquisite and Memorable Events</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Arrington Chambliss -->
+          <div class="review-slide">
+            <div class="review-card">
+              <div class="review-quote-icon">
+                <svg width="36" height="28" viewBox="0 0 36 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 28V16.8C0 7.467 5.6 1.4 14.933 0L16.8 5.6C11.2 7 8.4 10.267 8.4 16.8V28H0ZM19.2 28V16.8C19.2 7.467 24.8 1.4 34.133 0L36 5.6C30.4 7 27.6 10.267 27.6 16.8V28H19.2Z" fill="#A8CD3A" fill-opacity="0.35"/>
+                </svg>
+              </div>
+              <p class="review-text">Cindy Cushman is a strong HR consultant. She is knowledgeable about baseline HR regulation and state of the art practice for creating an effective team. Cindy is an effective and skillful advisor, coach and HR leader. She worked with Episcopal City Mission to create a staffing structure that would accommodate a new strategic direction. She advised the creation of job descriptions, hiring process, and baseline training for our new team.</p>
+              <div class="review-author">
+                <img src="assets/reviewers/arrington-chambliss.jpg" alt="Arrington Chambliss" class="review-avatar" loading="lazy">
+                <div class="review-meta">
+                  <strong class="review-name">Arrington Chambliss</strong>
+                  <span class="review-title">Executive Director, Episcopal City Mission</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end review-track -->
+
+        <!-- Navigation Arrows -->
+        <button class="review-nav review-prev" id="reviewPrev" aria-label="Previous review">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="review-nav review-next" id="reviewNext" aria-label="Next review">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
       </div>
+
+      <!-- Dots -->
+      <div class="review-dots" id="reviewDots">
+        <button class="review-dot active" data-index="0" aria-label="Review 1"></button>
+        <button class="review-dot" data-index="1" aria-label="Review 2"></button>
+        <button class="review-dot" data-index="2" aria-label="Review 3"></button>
+        <button class="review-dot" data-index="3" aria-label="Review 4"></button>
+      </div>
+
     </div>
   </section>
 
