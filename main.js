@@ -108,16 +108,25 @@ document.addEventListener('DOMContentLoaded', () => {
       
       fetch(SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: 'email=' + encodeURIComponent(email)
       })
       .then(response => {
-        submitBtn.textContent = 'Subscribed!';
-        submitBtn.style.backgroundColor = 'var(--lime-500)';
-        submitBtn.style.color = 'var(--navy-900)';
+        // Because of Google Apps Script redirects, response might be opaque or redirect
+        return response.json();
+      })
+      .then(data => {
+        if (data.status === 'already_subscribed') {
+          submitBtn.textContent = 'Already Subscribed';
+          submitBtn.style.backgroundColor = '#facc15'; // yellow
+          submitBtn.style.color = '#000';
+        } else {
+          submitBtn.textContent = 'Subscribed!';
+          submitBtn.style.backgroundColor = 'var(--lime-500)';
+          submitBtn.style.color = 'var(--navy-900)';
+        }
         emailInput.value = '';
         setTimeout(() => {
           submitBtn.textContent = originalText;
