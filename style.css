@@ -1359,3 +1359,13 @@
   .review-next { right: 0; }
   .review-text { font-size: 0.95rem; }
 }
+
+
+@media (max-width: 900px) {
+  .question-grid, .leadership-grid { grid-template-columns: 1fr !important; gap: 48px; }
+  .lead-photo-wrap { margin: 0 auto 30px; max-width: 320px; }
+  .lead-photo-wrap .arc-behind { left: -10px; width: 180px; }
+  .lead-cred { left: 0px; bottom: -30px; padding: 16px 20px; right: 0px; width: 90%; margin: 0 auto; }
+  .q-panel { margin: 0 auto; width: 100%; max-width: 400px; }
+}
+
