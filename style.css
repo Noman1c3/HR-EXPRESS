@@ -900,7 +900,7 @@
   color: rgba(180, 195, 230, 0.85);
   line-height: 1.6;
   margin: 0;
-}
+ text-align: justify; }
 
 /* ── Initials fallback ─── */
 .team-member-photo--initials {
