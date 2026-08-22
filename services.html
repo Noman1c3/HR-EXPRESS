@@ -61,7 +61,12 @@
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-      <a href="#top" class="logo"><img src="assets/logos/header_logo.png" alt="HR Express Service"></a>
+      <a href="index.html" class="logo">
+      <picture>
+        <source media="(max-width: 900px)" srcset="assets/logos/header_logo.png">
+        <img src="assets/logos/desktop_logo.webp" alt="HR Express Service">
+      </picture>
+    </a>
     <nav class="nav-links" id="navLinks">
       <a href="index.html">Home</a>
       <a href="how-it-works.html">How It Works</a>
@@ -348,16 +353,6 @@
 
 <script src="main.js"></script>
 <script>
-  const navToggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', open);
-  });
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', false);
-  }));
 
   // ===== TEAM CAROUSEL: auto-scrolling, draggable, seamless loop =====
   (function () {
